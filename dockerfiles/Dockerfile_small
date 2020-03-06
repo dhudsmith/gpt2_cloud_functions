@@ -3,7 +3,9 @@ FROM ibmfunctions/action-python-v3.7
 RUN apt-get -y update && apt-get -y install gcc
 
 WORKDIR /
-COPY checkpoint /checkpoint
+RUN mkdir /checkpoint
+RUN mkdir /checkpoint/run1
+COPY /checkpoint/run1 /checkpoint/run1
 
 # Make changes to the requirements/app here.
 # This Dockerfile order allows Docker to cache the checkpoint layer

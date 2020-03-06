@@ -10,15 +10,24 @@ You can play with a web-based demo of a Cloud Run API pointing at the default 11
 
 The demo web UI is based off of the `app_ui.html` file in this repo (built on [Bulma](https://bulma.io) and [jQuery](https://jquery.com)) and is designed to be easily hackable to add new features and/or adjust the design (e.g. you can change the URL in the JavaScript function to point to your own Cloud Run API).
 
-## How to Build the Container And Start Cloud Run
+## How to Build the Container
 
-Since Cloud Run is stateless without access to local storage, you must bundle the model within the container. First, download/clone this repo and copy the model into the folder (the model should be in the form of the folder hierarchy `/checkpoint/run1`, which is the case by default for most finetuning scripts)
-
-Then build the image:
-
+Use the `-f` command to build the dockerfile containing the desired model and tag the docker image appropriately 
 ```shell
-docker build . -t gpt2
+docker build . -f dockerfiles/Dockerfile_<tagname> -t <username>/gpt2:<tagname>
 ```
+
+Push the docker image to docker
+```shell
+docker push <username>/gpt2:<tagname>
+```
+
+## Create the IBM Cloud Functions Action
+```shell
+
+```
+
+
 
 If you want to test the image locally with the same specs as Cloud Run, you can run:
 
