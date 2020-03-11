@@ -22,13 +22,26 @@ Push the docker image to docker
 docker push <username>/gpt2:<tagname>
 ```
 
-## Create the IBM Cloud Functions Action
-```shell
+## Creating the IBM Cloud Functions Action
+Authenticate into IBM Cloud following the instructions under "Getting Started" on the IBM Cloud Functions portal.
 
+Being sure to swap in the correct `<tag>`, execute the following: 
+
+```bash
+ibmcloud fn action create gpt2_gen_<tag> gpt2_nlg_fn.py --docker dhudsmith/gpt2:<tag> --memory 2048 --timeout 600000 --web true 
 ```
 
+## Prepared IBM Cloud Functions Endpoints
+* Base Model: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_small
+* Debate: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_debate
+* Elon: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_elon
+* Jokes:
+* Lyrics:
+* qtmovies:
+* Trump:
+* Tyson:
 
-
+## Running locally
 If you want to test the image locally with the same specs as Cloud Run, you can run:
 
 ```shell
@@ -67,7 +80,6 @@ text = req.json()['text']
 print(text)
 ```
 
-The UI from `app_ui.html` utilizes AJAX `POST` requests via jQuery to retrieve the generated text and parse the data for display.
 
 ## Helpful Notes
 

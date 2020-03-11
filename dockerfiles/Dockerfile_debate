@@ -5,7 +5,7 @@ RUN apt-get -y update && apt-get -y install gcc
 WORKDIR /
 RUN mkdir /checkpoint
 RUN mkdir /checkpoint/run1
-COPY /checkpoint/run_small /checkpoint/run1
+COPY /checkpoint/run_debate /checkpoint/run1
 
 # Make changes to the requirements/app here.
 # This Dockerfile order allows Docker to cache the checkpoint layer
