@@ -35,11 +35,11 @@ ibmcloud fn action create gpt2_gen_<tag> gpt2_nlg_fn.py --docker dhudsmith/gpt2:
 * Base Model: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_small
 * Debate: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_debate
 * Elon: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_elon
-* Jokes:
-* Lyrics:
-* qtmovies:
-* Trump:
-* Tyson:
+* Jokes: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_jokes 
+* Lyrics: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_lyrics 
+* qtmovies: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_qtmovies 
+* Trump: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_trump 
+* Tyson: https://us-south.functions.cloud.ibm.com/api/v1/web/3095e235-12c9-4636-86bc-bd5bdc3e2599/default/gpt2_gen_tyson 
 
 ## Running locally
 If you want to test the image locally with the same specs as Cloud Run, you can run:

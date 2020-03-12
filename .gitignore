@@ -1,4 +1,7 @@
 .vscode
 models/
 checkpoint/
+data/
 .ipynb_checkpoints/
+.idea/
+samples/
